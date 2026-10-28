@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · DSSC Student Services</title>
+<link rel="icon" href="logo.jpg" type="image/x-icon">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-card">
+      <div class="header-inner">
+        <div class="header-left">
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="true" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+            <svg class="hamburger" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 12h16M4 16h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <a class="brand" href="#view-dashboard">
+          <img class="brand-logo" src="logo.jpg" alt="DSSC Student Services Logo" width="40" height="40" />
+          <div class="brand-text">
+            <div class="wordmark">DSSC Student Services</div>
+            <div class="subtitle">Student Portal</div>
+          </div>
+          </a>
+        </div>
+        <div class="profile-badge">
+          <div class="avatar">CS</div>
+          <div class="profile-text">
+            <div class="name">Charish Salama</div>
+            <div class="student-id">2023-04562</div>
+          </div>
+          <button class="sign-out" type="button" aria-label="Sign out"><span class="sign-out-label">Sign Out</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#view-dashboard" class="nav-link active" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="nav-label">Dashboard</span></a></li>
+        <li><a href="#view-requests" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="nav-label">Requests</span></a></li>
+        <li><a href="#view-records" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="12" x2="21" y2="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="18" x2="21" y2="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="6" x2="3.01" y2="6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="nav-label">Records</span></a></li>
+        <li><a href="#view-clearance" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-label">Clearance</span></a></li>
+
+             <li><a href="#view-settings" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.7 1.7 0 0 0-1.82-.34 1.7 1.7 0 0 0-1 1.55V20a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.82.34l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.82-.34l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9c.25.1.53.16.82.16H20a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-label">Settings</span></a></li>
+        <li><a href="#view-help" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 3-3 3-3 3M12 17v.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="nav-label">Help</span></a></li>
+
+      </ul>
+    </nav>
+    <div class="nav-backdrop" hidden aria-hidden="true"></div>
+
+    <main id="main">
+      <section id="view-dashboard" class="view-section view-dashboard active">
+      <!-- Alert banner (dismissible) -->
+      <div class="alert-banner" role="alert" aria-live="polite">
+        <svg class="alert-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" stroke-width="2"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="alert-message"><strong>You have 2 clearance deficiencies to resolve before enrollment.</strong></div>
+        <button class="alert-close" aria-label="Dismiss alert"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+
+      <!-- Hero / welcome section (the single h1) -->
+      <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="eyebrow"><span class="pill eyebrow-pill"><svg class="pill-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>SPRING TERM &bull; STUDENT SERVICES</span></div>
+        <h1 id="hero-heading">Your Student Services Dashboard</h1>
+        <p class="hero-sub">Review your urgent status, recent requests, and submit a new service request from one place.</p>
+      </section>
+
+      <!-- Record summary section -->
+      <section class="record-section" aria-labelledby="record-heading">
+        <h2 id="record-heading">Enrollment Record</h2>
+        <div class="record-card">
+          <div class="record-accent"></div>
+          <div class="record-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h15l2 2h1a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div class="record-body">
+            <div class="record-label">Verified Enrollment Record</div>
+            <div class="record-program">Bachelor of Science in Information Technology</div>
+          </div>
+          <div class="record-pill">Enrolled: 3rd Year</div>
+        </div>
+      </section>
+
+      <!-- Summary metrics section (primary task) -->
+      <section class="metrics-section" aria-labelledby="metrics-heading">
+        <h2 id="metrics-heading">Your Overview</h2>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <div class="metric-icon" style="background:var(--ds-primary-tint); color:var(--ds-primary)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h15l2 2h1a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <div class="metric-body">
+              <div class="metric-value">18</div>
+              <div class="metric-label">Active Units</div>
+              <div class="metric-status">All enrolled classes confirmed</div>
+            </div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon" style="background:var(--ds-primary-tint); color:var(--ds-primary)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="metric-body">
+              <div class="metric-value">2</div>
+              <div class="metric-label">Pending Requests</div>
+              <div class="metric-status">One needs your action</div>
+            </div>
+          </article>
+          <article class="metric-card metric-card--urgent">
+            <div class="metric-icon" style="background:var(--ds-danger-tint); color:var(--ds-danger)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" stroke-width="2"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div class="metric-body">
+              <div class="metric-value">2</div>
+              <div class="metric-label">Clearance Deficiencies</div>
+              <div class="metric-status urgent">Resolve before graduation — urgent</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Recent requests table section (secondary task) -->
+      <section class="requests-section" aria-labelledby="requests-heading">
+        <h2 id="requests-heading">Recent Requests</h2>
+        <div class="table-wrap">
+          <table class="records-table">
+            <caption>Recent service requests</caption>
+            <thead>
+              <tr>
+                <th scope="col">Request ID</th>
+                <th scope="col">Service Type</th>
+                <th scope="col">Date Filed</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Request ID"><span class="id-mono">REQ-1001</span></td>
+                <td data-label="Service Type">Certificate of Registration</td>
+                <td data-label="Date Filed">Oct 20, 2026</td>
+                <td data-label="Status"><span class="status status--pending"><span class="status-dot"></span>Pending</span></td>
+              </tr>
+              <tr>
+                <td data-label="Request ID"><span class="id-mono">REQ-1002</span></td>
+                <td data-label="Service Type">Subject Overload Permit</td>
+                <td data-label="Date Filed">Oct 18, 2026</td>
+                <td data-label="Status"><span class="status status--processing"><span class="status-dot"></span>Processing</span></td>
+              </tr>
+              <tr>
+                <td data-label="Request ID"><span class="id-mono">REQ-1003</span></td>
+                <td data-label="Service Type">Transcript of Records</td>
+                <td data-label="Date Filed">Oct 15, 2026</td>
+                <td data-label="Status"><span class="status status--approved"><span class="status-dot"></span>Approved</span></td>
+              </tr>
+              <tr>
+                <td data-label="Request ID"><span class="id-mono">REQ-1004</span></td>
+                <td data-label="Service Type">Document Requisition</td>
+                <td data-label="Date Filed">Oct 10, 2026</td>
+                <td data-label="Status"><span class="status status--rejected"><span class="status-dot"></span>Rejected</span></td>
+              </tr>
+              <tr>
+                <td data-label="Request ID"><span class="id-mono">REQ-1005</span></td>
+                <td data-label="Service Type">Certificate of Enrollment</td>
+                <td data-label="Date Filed">Oct 05, 2026</td>
+                <td data-label="Status"><span class="status status--approved"><span class="status-dot"></span>Approved</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- New service request form section (utility/form) -->
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading">Submit New Request</h2>
+        <div class="stepper" aria-label="Request progress">
+          <span class="step step--current" aria-current="step">1</span>
+          <span class="step-connector"></span>
+          <span class="step">2</span>
+          <span class="step-connector"></span>
+          <span class="step">3</span>
+        </div>
+        <p class="stepper-caption">Select Service &nbsp;•&nbsp; Details &nbsp;•&nbsp; Review</p>
+
+        <form id="service-form" novalidate>
+          <div class="field">
+            <label for="service-category">Service Category</label>
+            <small id="service-category-help">Choose the type of record or permit you need.</small>
+            <select id="service-category" name="service-category" required aria-required="true" aria-describedby="service-category-help service-category-error">
+              <option value="">Select a category</option>
+              <option value="requisition">Document Requisition</option>
+              <option value="overload">Subject Overload Permit</option>
+            </select>
+            <p class="error-msg" id="service-category-error" role="alert"></p>
+          </div>
+          <div class="field field--full">
+            <label for="reason">Reason / Request Details</label>
+            <small id="reason-help">Explain what you need and why. Minimum 20 characters.</small>
+            <textarea id="reason" name="reason" rows="5" required aria-required="true" aria-describedby="reason-help reason-error" data-minlength="20"></textarea>
+            <span id="reason-count" class="char-count">0 <span class="count-muted">/ 20</span></span>
+            <p class="error-msg" id="reason-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="student-id">Student ID (optional)</label>
+            <small id="student-id-help">Your monospace student identifier, e.g. 2023-04562.</small>
+            <input type="text" id="student-id" name="student-id" placeholder="2023-04562" aria-describedby="student-id-help student-id-error" />
+            <p class="error-msg" id="student-id-error" role="alert"></p>
+          </div>
+          <div class="button-group">
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+        </form>
+        <div class="feedback" id="form-feedback" role="status" aria-live="polite" hidden>
+          <svg class="feedback-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <strong>Request submitted successfully.</strong> You&rsquo;ll be notified when it&rsquo;s processed.
+        </div>
+      </section>
+      </section>
+      <section id="view-requests" class="view-section">
+        <h1 class="section-title" style="margin-top: 20px;">Service Requests</h1>
+        <p style="color: #94a3b8;">This is the Requests page. Content coming soon.</p>
+      </section>
+      <section id="view-records" class="view-section">
+        <h1 class="section-title" style="margin-top: 20px;">My Records</h1>
+        <p style="color: #94a3b8;">This is the Records page.</p>
+      </section>
+      <section id="view-clearance" class="view-section">
+        <h1 class="section-title" style="margin-top: 20px;">Clearance</h1>
+        <p style="color: #94a3b8;">This is the Clearance page.</p>
+      </section>
+      <section id="view-settings" class="view-section">
+        <h1 class="section-title" style="margin-top: 20px;">Settings</h1>
+        <p style="color: #94a3b8;">This is the Settings page.</p>
+      </section>
+      <section id="view-help" class="view-section">
+        <h1 class="section-title" style="margin-top: 20px;">Help &amp; Support</h1>
+        <p style="color: #94a3b8;">This is the Help page.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="copyright">&copy; 2026 DSSC Student Services. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="#">Help</a>
+        <a href="#">Clearance</a>
+        <a href="#">Records</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+
+      // Responsive navigation toggle
+      var btn = document.getElementById('menu-toggle');
+      var nav = document.getElementById('primary-nav');
+      var backdrop = document.querySelector('.nav-backdrop');
+      if(btn && nav){
+        var desktop = window.matchMedia('(min-width: 1024px)');
+        var storageKey = 'dssc-sidebar-visible';
+        var closeTimer;
+        var isDesktop = function(){ return desktop.matches; };
+        var transitionDelay = function(){
+          return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200;
+        };
+        var savedDesktopState = function(){
+          try {
+            return window.localStorage.getItem(storageKey);
+          } catch(error) {
+            return null;
+          }
+        };
+        var saveDesktopState = function(visible){
+          try {
+            window.localStorage.setItem(storageKey, String(visible));
+          } catch(error) {}
+        };
+        var setState = function(open, restoreFocus){
+          window.clearTimeout(closeTimer);
+          if(open){
+            nav.hidden = false;
+            nav.inert = false;
+            nav.setAttribute('aria-hidden', 'false');
+            if(!isDesktop() && backdrop) backdrop.hidden = false;
+          } else {
+            nav.inert = true;
+            nav.setAttribute('aria-hidden', 'true');
+            if(!isDesktop() && backdrop) backdrop.hidden = true;
+            closeTimer = window.setTimeout(function(){
+              if(!isDesktop()){
+                nav.hidden = true;
+              }
+            }, transitionDelay());
+          }
+          var shell = document.querySelector('.page-shell');
+          if(shell) shell.classList.toggle('sidebar-collapsed', isDesktop() && !open);
+          btn.setAttribute('aria-expanded', String(open));
+          if(restoreFocus) btn.focus();
+        };
+        var initialVisible = isDesktop() ? savedDesktopState() !== 'false' : false;
+        setState(initialVisible, false);
+        btn.addEventListener('click', function(){
+          var open = nav.getAttribute('aria-hidden') !== 'false';
+          setState(open, false);
+          if(isDesktop()) saveDesktopState(open);
+        });
+        function showView(hash, updateHistory){
+          var requestedView = hash && document.getElementById(hash.slice(1));
+          var targetId = requestedView && requestedView.classList.contains('view-section')
+            ? requestedView.id
+            : 'view-dashboard';
+          var targetHash = '#' + targetId;
+          document.querySelectorAll('.view-section').forEach(function(view){
+            var active = view.id === targetId;
+            view.classList.toggle('active', active);
+            view.hidden = !active;
+          });
+          nav.querySelectorAll('.nav-link').forEach(function(link){
+            var active = link.getAttribute('href') === targetHash;
+            link.classList.toggle('active', active);
+            if(active){
+              link.setAttribute('aria-current', 'page');
+            } else {
+              link.removeAttribute('aria-current');
+            }
+          });
+          if(updateHistory && window.location.hash !== targetHash){
+            window.history.pushState({ view: targetId }, '', targetHash);
+          }
+          window.scrollTo(0, 0);
+        }
+        nav.querySelectorAll('.nav-link').forEach(function(link){
+          link.addEventListener('click', function(event){
+            event.preventDefault();
+            showView(link.getAttribute('href'), true);
+            if(!isDesktop()) setState(false, true);
+          });
+        });
+        showView(window.location.hash || '#view-dashboard', false);
+        window.addEventListener('hashchange', function(){
+          showView(window.location.hash || '#view-dashboard', false);
+        });
+        window.addEventListener('popstate', function(){
+          showView(window.location.hash || '#view-dashboard', false);
+        });
+        if(backdrop) backdrop.addEventListener('click', function(){ setState(false, true); });
+        document.addEventListener('keydown', function(event){
+          if(event.key === 'Escape' && nav.getAttribute('aria-hidden') === 'false' && !isDesktop()){
+            setState(false, true);
+          }
+        });
+        desktop.addEventListener('change', function(){
+          setState(desktop.matches ? savedDesktopState() !== 'false' : false, false);
+        });
+      }
+
+      // Dismissible alert banner
+      var closeBtn = document.getElementById('alert-close');
+      var banner = document.querySelector('.alert-banner');
+      if(closeBtn && banner){
+        closeBtn.addEventListener('click', function(){
+          banner.hidden = true;
+        });
+      }
+
+      // Form validation
+      var form = document.getElementById('service-form');
+      var feedback = document.getElementById('form-feedback');
+      if(!form) return;
+      var category = document.getElementById('service-category');
+      var reason = document.getElementById('reason');
+      var categoryError = document.getElementById('service-category-error');
+      var reasonError = document.getElementById('reason-error');
+      var reasonCount = document.getElementById('reason-count');
+
+      function clearError(input, errEl){
+        input.removeAttribute('aria-invalid');
+        if(errEl) errEl.textContent = '';
+        if(feedback) feedback.hidden = true;
+      }
+      if(category) category.addEventListener('change', function(){ clearError(category, categoryError); });
+      if(reason){
+        reason.addEventListener('input', function(){
+          clearError(reason, reasonError);
+          if(reasonCount){
+            var n = reason.value.length;
+            reasonCount.innerHTML = n + ' <span class="count-muted">/ 20</span>';
+          }
+        });
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        clearError(category, categoryError);
+        clearError(reason, reasonError);
+        var ok = true;
+        var first = null;
+        if(!category || category.value === ''){
+          if(categoryError) categoryError.textContent = 'Please select a service category.';
+          if(category){ category.setAttribute('aria-invalid','true'); if(!first) first = category; }
+          ok = false;
+        }
+        if(!reason || reason.value.trim().length < 20){
+          if(reasonError) reasonError.textContent = 'Please provide at least 20 characters.';
+          if(reason){ reason.setAttribute('aria-invalid','true'); if(!first) first = reason; }
+          ok = false;
+        }
+        if(!ok){
+          if(first) first.focus();
+          return;
+        }
+        if(feedback){
+          feedback.hidden = false;
+          feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.reset();
+        if(reasonCount) reasonCount.innerHTML = '0 <span class="count-muted">/ 20</span>';
+      });
+    })();
+  </script>
+</body>
+</html>

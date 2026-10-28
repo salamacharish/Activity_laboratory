@@ -1,0 +1,22 @@
+1. Layout Architecture
+For this administrative DSSC portal, a hybrid approach using a Top Navigation combined with a sliding 
+idebar shell is the most effective. The top navigation saves valuable vertical space on mobile devices 
+while providing quick access to essential user actions like settings, logout, and the profile badge. 
+The sliding sidebar then provides a clean, scalable space to organize multiple complex modules 
+(like Enrollments, Grades, and Faculty Records) without cluttering the main dashboard.
+
+2. Responsive Tactics
+To prevent the data table from becoming unreadable or causing a horizontal page blowout 
+at a 360px viewport, I applied the stacked visual cards strategy. Using CSS media queries, 
+I changed the table elements to `display: block` and hid the standard table headers. 
+I then used the `::before` pseudo-element with `content: attr(data-label)` to dynamically display 
+the column headers (e.g., "Service Type:", "Date Filed:") next to the data on each stacked row, 
+ensuring everything remains perfectly readable.
+
+3. Accessibility
+Removing browser outlines with `outline: none` severely harms usability for keyboard-only users, 
+as they lose their visual anchor and cannot tell which element currently has focus. To fix this, 
+I utilized the `:focus-visible` pseudo-class in CSS to apply a highly visible, 
+3px solid blue outline for form inputs and a distinct glowing box-shadow for buttons. 
+This ensures that anyone tabbing through the page has a clear, high-contrast visual indicator 
+of their exact position.
